@@ -1,16 +1,24 @@
 package model;
 
+
 import java.sql.Date;
-import java.time.LocalDate;
 
 public class Reservation {
 
     private int id;
-    private int roomId;
+    private int roomNumber;
     private String customerTc;
     private Date begDate;
     private Date endDate;
-    private double price;
+    private String extraService;
+
+    public String getExtraService() {
+        return extraService;
+    }
+
+    public void setExtraService(String extraService) {
+        this.extraService = extraService;
+    }
 
     public int getId() {
         return id;
@@ -20,19 +28,19 @@ public class Reservation {
         this.id = id;
     }
 
-    public int getRoomId() {
-        return roomId;
+    public int getRoomNumber() {
+        return roomNumber;
     }
 
-    public void setRoomId(int roomId) {
-        this.roomId = roomId;
+    public void setRoomNumber(int roomNumber) {
+        this.roomNumber = roomNumber;
     }
 
-    public String getCustomerId() {
+    public String getCustomerTc() {
         return customerTc;
     }
 
-    public void setCustomerId(String customerTc) {
+    public void setCustomerTc(String customerTc) {
         this.customerTc = customerTc;
     }
 
@@ -52,12 +60,5 @@ public class Reservation {
         this.endDate = endDate;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
 }
