@@ -4,12 +4,21 @@ import java.util.Set;
 
 public class Room {
 
-    private String id;
+    private int id;
     private int roomCapacity;
     private int roomNumber;
     private Set<Features> features;
     private String extraFeatures;
     private boolean isEmpty;
+    private double price;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public boolean isEmpty() {
         return isEmpty;
@@ -22,7 +31,7 @@ public class Room {
         return features;
     }
 
-    public void setFeatures(Set<Features> features) {
+    public void setFeature(Set<Features> features) {
         this.features = features;
     }
 
@@ -33,11 +42,11 @@ public class Room {
     public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
     }
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
